@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:LightSwitch.ViewModels"
+             x:Class="LightSwitch.MainPage">
+    <ContentPage.BindingContext>
+        <vm:BrightnessViewModel x:Name="ViewModel" />
+    </ContentPage.BindingContext>
+   
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+        <HorizontalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+            <Label Text="Click to on or off" />
+            <Button Text="Switch" Command="{Binding SwitchOnOffCommand}"  />
+        </HorizontalStackLayout>
+        </VerticalStackLayout>
+</ContentPage>
